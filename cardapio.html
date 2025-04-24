@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Dogão Do Jão ®</title>
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="imagens/icon-quem-somos/icon.png">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagens/logo1.png" alt="Logo Normal" class="logo-normal">
+                    <img src="imagens/identidade-visual.gif" alt="Logo Hover" class="logo-hover">
+                </a>
+            </div>
+
+            <nav class="desktop-menu">
+                <a href="login.html"><span class="material-symbols-outlined">login</span>Login</a>
+                <a href="cadastro.html"><span class="material-symbols-outlined">person_add</span>Cadastro</a>
+                <a href="cardapio.html"><span class="material-symbols-outlined">restaurant_menu</span>Cardápio</a>
+                <a href="quem-somos.html"><span class="material-symbols-outlined">co_present</span>Quem somos</a>
+                <a href="index.html"><span class="material-symbols-outlined">undo</span>Voltar</a>
+                <a href="https://play.google.com/store/apps?hl=pt_BR" target="_blank"><img src="imagens/googleplay.png" alt=""></a>
+                <a href="https://www.apple.com/br/app-store/" target="_blank"><img src="imagens/appstore.png" alt=""></a>
+            </nav>
+
+            <div class="mobile-menu">
+                <button class="menu-button">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <nav class="menu-items">
+                    <button class="close-button">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                    <a href="https://play.google.com/store/apps?hl=pt_BR" target="_blank"><img src="imagens/googleplay.png" alt="">Google Play</a>
+                    <a href="https://www.apple.com/br/app-store/" target="_blank"><img src="imagens/appstore.png" alt="">App Store</a>
+                    <a href="login.html"><span class="material-symbols-outlined">login</span>Login</a>
+                    <a href="cadastro.html"><span class="material-symbols-outlined">person_add</span>Cadastro</a>
+                    <a href="cardapio.html"><span class="material-symbols-outlined">restaurant_menu</span>Cardápio</a>
+                    <a href="quem-somos.html"><span class="material-symbols-outlined">co_present</span>Quem somos</a>
+                    <a href="index.html"><span class="material-symbols-outlined">undo</span>Voltar</a>
+                </nav>
+            </div>
+
+        </header>
+
+        <!-- Container do Botão Flutuante -->
+        <div class="fab-container">
+            <!-- Opções (aparecem à esquerda do botão principal) -->
+            <div class="fab-options">
+                <!-- Opção mais à esquerda -->
+                <a href="https://www.ifood.com.br/" class="fab-button fab-option" target="_blank">
+                    <img src="imagens/ifood.png" alt="Opção 2">
+                </a>
+                <!-- Opção mais próxima do botão principal -->
+                <a href="cardapio.html" class="fab-button fab-option">
+                    <img src="imagens/store.png" alt="Opção 1">
+                </a>
+            </div>
+
+            <!-- Botão Principal (aparece mais à direita) -->
+            <a href="#" class="fab-button fab-main" id="fabMainButton">
+                <img src="imagens/carrinho.png" alt="Abrir Opções" class="icon-open">
+                <img src="imagens/x.png" alt="Fechar Opções" class="icon-close">
+            </a>
+        </div>
+
+        <!-- ESTRUTURA DA PAGINA ABAIXO -->
+
+        <!-- Início do Código do Cardápio -->
+
+        <div class="menu-order-container">
+
+
+            <!-- === Botão PDF MODIFICADO com Ícone === -->
+            <div class="pdf-link-container">
+                <a href="imagens/cardapio/cardapio-pdf.pdf"
+                target="_blank"
+                class="pdf-menu-button">
+                    <i class="fas fa-file-pdf"></i> <!-- ÍCONE ADICIONADO AQUI -->
+                    Ver Cardápio Completo (PDF)
+                </a>
+            </div>
+            <!-- === FIM MODIFICADO === -->
+
+
+            <!-- === ETAPAS DO PEDIDO (Conteúdo das etapas inalterado) === -->
+            <div id="order-steps">
+                <!-- ETAPA 1: Lanches -->
+                <div class="step active" id="step-lanche">
+                    <h2>Passo 1: Escolha seu Lanche ou Combo</h2>
+                    <div class="menu-items-grid">
+                        <div class="menu-item"> <img src="imagens/cardapio/lanches/ChilliDog.png" alt="Chilli"> <h3>Chilli Dog</h3> <p class="description">Pão de cachorro-quente, salsicha, chili, queijo ralado, cebola picada.</p> <p class="price">R$ 20,00</p> <button class="add-to-cart-btn" data-name="Chilli Dog" data-price="20.00">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/lanches/combofamlia.png" alt="Familia1"> <h3>Combo Família</h3> <p class="description">Pão de cachorro-quente, salsicha, mostarda, ketchup, picles, tomate, cebola, alface, pepino.</p> <p class="price">R$ 20,00</p> <button class="add-to-cart-btn" data-name="Combo Família" data-price="20.00">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/lanches/combovegie.png" alt="Lanche Vegetariano"> <h3>Combo vegano</h3> <p class="description">Pão de cachorro-quente, salsicha vegetariana, molho branco, repolho roxo, feijão, cebola crocante, cebolinha.</p> <p class="price">R$ 20,00</p> <button class="add-to-cart-btn" data-name="Combo Vegano" data-price="20.00">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/lanches/dupla.png" alt="Lanche Vegetariano"> <h3>Dupla Quente</h3> <p class="description">Pão de cachorro-quente, salsicha, ketchup, mostarda, milho, pimentão, cebola roxa, queijo ralado, coentro.</p> <p class="price">R$ 20,00</p> <button class="add-to-cart-btn" data-name="Dupla Quente" data-price="20.00">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/lanches/duplo-salada.png" alt="Lanche Vegetariano"> <h3>Duplo Burger Salada</h3> <p class="description">Pão de hambúrguer, dois hambúrgueres, queijo, tomate, cebola, alface, molho branco.</p> <p class="price">R$ 20,00</p> <button class="add-to-cart-btn" data-name="Duplo Burger Salada" data-price="20.00">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/lanches/oniondog.png" alt="Lanche Vegetariano"> <h3>Onidog</h3> <p class="description">Pão de cachorro-quente, salsicha, tomate, cebola frita, mostarda, bacon, coentro.</p> <p class="price">R$ 20,00</p> <button class="add-to-cart-btn" data-name="Onidog" data-price="20.00">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/lanches/pizzadog.png" alt="Lanche Vegetariano"> <h3>Pizza Dog</h3> <p class="description">Massa de pizza, molho de tomate, salsichas, queijo muçarela, tomate em rodelas, batata palha.</p> <p class="price">R$ 20,00</p> <button class="add-to-cart-btn" data-name="Pizza Dog" data-price="20.00">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/lanches/Porkdog.png" alt="Lanche Vegetariano"> <h3>Porkdog</h3> <p class="description">Pão de cachorro-quente, salsicha, molho barbecue, cebola frita, bacon, torresmo.</p> <p class="price">R$ 20,00</p> <button class="add-to-cart-btn" data-name="Porkdog" data-price="20.00">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/lanches/Sashidog.png" alt="Lanche Vegetariano"> <h3>Sashi Dog</h3> <p class="description">Pão de cachorro-quente verde com gergelim, salsicha, molho branco, pedaços de salmão empanado, cebolinha.</p> <p class="price">R$ 20,00</p> <button class="add-to-cart-btn" data-name="Sashi Dog" data-price="20.00">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/lanches/top6.png" alt="Lanche Vegetariano"> <h3>Top 6</h3> <p class="description">Pão de hambúrguer com gergelim, seis hambúrgueres, queijo, molho branco, alface.</p> <p class="price">R$ 20,00</p> <button class="add-to-cart-btn" data-name="Top 6" data-price="20.00">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/lanches/vegie1.png" alt="Lanche Vegetariano"> <h3>Lanche Vegetariano</h3> <p class="description">Pão de hambúrguer integral, hambúrguer vegetariano, molho branco, tomate, picles, cebola roxa, espinafre.</p> <p class="price">R$ 20,00</p> <button class="add-to-cart-btn" data-name="Lanche Vegetariano" data-price="20.00">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/lanches/vegie2.png" alt="Lanche Vegetariano"> <h3>Dog Vegetariano</h3> <p class="description">Pão de cachorro-quente, salsicha vegetariana, molho vermelho, molho branco, cebola picada, coentro.</p> <p class="price">R$ 20,00</p> <button class="add-to-cart-btn" data-name="Dog Vegetariano" data-price="20.00">Adicionar</button> </div>
+
+                    </div>
+                    <div class="step-nav"> <span></span> <button class="next-btn" onclick="changeStep(2)">Próximo (Bebidas) →</button> </div>
+                </div>
+                <!-- ETAPA 2: Bebidas -->
+                <div class="step" id="step-bebida">
+                    <h2>Passo 2: Escolha sua Bebida e Sobremesa</h2>
+                    <div class="menu-items-grid">
+
+                        <div class="menu-item"> <img src="imagens/cardapio/bebidas/coca-2l.png" alt="Refrigerante"> <h3>Coca-cola 2 litros</h3> <p class="description">Coca-cola de 2 litros, escolha entre normal, zero ou light.</p> <p class="price">R$ 5,00</p> <button class="add-to-cart-btn" data-name="Refrigerante 2 litros" data-price="5.00">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/bebidas/coca-lata.png" alt="Suco Natural"> <h3>Coca cola</h3> <p class="description">Lata de coca-cola (350ml).</p> <p class="price">R$ 8,00</p> <button class="add-to-cart-btn" data-name="Coca-cola 350ml" data-price="8.00">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/bebidas/fanta-lata.png" alt="Água Mineral"> <h3>Fanta</h3> <p class="description">Escolha entre fanta laranja, uva ou guaraná (350ml).</p> <p class="price">R$ 3,50</p> <button class="add-to-cart-btn" data-name="Fanta 350ml" data-price="3.50">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/bebidas/guarana-2l.png" alt="Água Mineral"> <h3>Guaraná 2 litros</h3> <p class="description">Guaraná de 2 litros, normal ou zero.</p> <p class="price">R$ 3,50</p> <button class="add-to-cart-btn" data-name="Guaraná 2 litros" data-price="3.50">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/bebidas/guarana-lata.png" alt="Água Mineral"> <h3>Guaraná</h3> <p class="description">Guaraná normal ou zero (350ml).</p> <p class="price">R$ 3,50</p> <button class="add-to-cart-btn" data-name="Guaraná 350ml" data-price="3.50">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/bebidas/Sprite-lata.png" alt="Água Mineral"> <h3>Sprite</h3> <p class="description">Sprite normal ou zero (350ml).</p> <p class="price">R$ 3,50</p> <button class="add-to-cart-btn" data-name="Sprite 350ml" data-price="3.50">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/bebidas/sobremesa/casquinha-chocolate.png" alt="Água Mineral"> <h3>Casquinha de Chocolate</h3> <p class="description">Deliciosa casquinha de chocolate com cobertura.</p> <p class="price">R$ 1,00</p> <button class="add-to-cart-btn" data-name="Casquinha de chocolate" data-price="1.00">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/bebidas/sobremesa/casquinha-crocante.png" alt="Água Mineral"> <h3>Casquinha crocante</h3> <p class="description">Deliciosa casquinha sabor baunilha crocante com castanhas e cobertura de caramelo.</p> <p class="price">R$ 3,00</p> <button class="add-to-cart-btn" data-name="Casquinha crocante" data-price="3.00">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/bebidas/sobremesa/casquinha-morango.png" alt="Água Mineral"> <h3>Casquinha de Morango</h3> <p class="description">Deliciosa casquinha sabor morango.</p> <p class="price">R$ 1,00</p> <button class="add-to-cart-btn" data-name="Casquinha Morango" data-price="1.00">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/bebidas/sobremesa/milkshake-chocolate.png" alt="Água Mineral"> <h3>Milk-Shake sabor chocolate</h3> <p class="description">Milk-shake sabor chocolate com massa de baunilha ou mista e recheada de bombom, wafer sabor chocolate e biju.</p> <p class="price">R$ 10,00</p> <button class="add-to-cart-btn" data-name="Milk-shake Chocolate" data-price="10.00">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/bebidas/sobremesa/milkshake-morango.png" alt="Água Mineral"> <h3>Milk-Shake sabor morango</h3> <p class="description">Milk-shake sabor morango com massa de baunilha e recheado com chantilly e pedaços de morango.</p> <p class="price">R$ 10,00</p> <button class="add-to-cart-btn" data-name="Milk-shake Morango" data-price="10.00">Adicionar</button> </div>
+
+                        <div class="menu-item"> <img src="imagens/cardapio/bebidas/sobremesa/milkshake-café.png" alt="Água Mineral"> <h3>Milk-Shake sabor morango</h3> <p class="description">Milk-shake sabor café com massa de chocolate recheado com grãos de café, calda de chocolate e biju.</p> <p class="price">R$ 10,00</p> <button class="add-to-cart-btn" data-name="Milk-shake Café" data-price="10.00">Adicionar</button> </div>
+
+                    </div>
+                    <div class="step-nav"> <button class="prev-btn" onclick="changeStep(1)">← Anterior (Lanches)</button> <button class="next-btn" onclick="changeStep(3)">Próximo (Endereço) →</button> </div>
+                </div>
+                <!-- ETAPA 3: Endereço -->
+                <div class="step" id="step-endereco">
+                    <h2>Passo 3: Endereço de Entrega</h2>
+                    <form id="address-form">
+                        <div class="form-group"> <label for="nome">Nome Completo:</label> <input type="text" id="nome" name="nome" required> </div>
+                        <div class="form-group"> <label for="telefone">Telefone (com DDD):</label> <input type="text" id="telefone" name="telefone" required placeholder="(XX) XXXXX-XXXX"> </div>
+                        <div class="form-group"> <label for="cep">CEP:</label> <input type="text" id="cep" name="cep" required placeholder="XXXXX-XXX"> </div>
+                        <div class="form-group"> <label for="endereco">Endereço (Rua, Nº, Bairro):</label> <input type="text" id="endereco" name="endereco" required> </div>
+                        <div class="form-group"> <label for="complemento">Complemento (Apto, Bloco, etc.):</label> <input type="text" id="complemento" name="complemento"> </div>
+                        <div class="form-group"> <label for="referencia">Ponto de Referência:</label> <textarea id="referencia" name="referencia"></textarea> </div>
+                    </form>
+                    <div class="step-nav"> <button class="prev-btn" onclick="changeStep(2)">← Anterior (Bebidas)</button> <button class="next-btn" onclick="changeStep(4)">Próximo (Pagamento) →</button> </div>
+                </div>
+                <!-- ETAPA 4: Pagamento - MODIFICADA COM ÍCONES -->
+                <div class="step" id="step-pagamento">
+                    <h2>Passo 4: Forma de Pagamento</h2>
+                    <form id="payment-form">
+                        <div class="form-group payment-options">
+                            <p>Escolha como deseja pagar:</p>
+                            <label>
+                                <input type="radio" name="payment_method" value="pix" checked>
+                                <i class="fab fa-pix"></i> Pix  <!-- Ícone Pix (requer FA Brands) -->
+                            </label>
+                            <br>
+                            <label>
+                                <input type="radio" name="payment_method" value="cartao_credito">
+                                <i class="fas fa-credit-card"></i> Cartão de Crédito (na entrega) <!-- Ícone Cartão -->
+                            </label>
+                            <br>
+                            <label>
+                                <input type="radio" name="payment_method" value="cartao_debito">
+                                <i class="fas fa-credit-card"></i> Cartão de Débito (na entrega) <!-- Ícone Cartão -->
+                            </label>
+                            <br>
+                            <label>
+                                <input type="radio" name="payment_method" value="dinheiro">
+                                <i class="fas fa-money-bill-wave"></i> Dinheiro (precisa de troco?) <!-- Ícone Dinheiro -->
+                            </label>
+                            <input type="text" id="troco_para" name="troco_para" placeholder="Ex: Troco para R$ 50,00" style="display: none; margin-top: 5px; max-width: 200px; margin-left: 25px;"> <!-- Leve indentação para alinhar com o texto -->
+                        </div>
+                        <div class="form-group">
+                            <label for="observacoes">Observações do Pedido:</label>
+                            <textarea id="observacoes" name="observacoes" placeholder="Ex: Tirar cebola, ponto da carne, etc."></textarea>
+                        </div>
+                    </form>
+                    <div class="step-nav">
+                        <button class="prev-btn" onclick="changeStep(3)">← Anterior (Endereço)</button>
+                        <button class="finalize-btn" onclick="finalizeOrder()">Finalizar Pedido</button>
+                    </div>
+                </div> <!-- Fim ETAPA 4 -->
+            </div> <!-- Fim de #order-steps -->
+
+
+            <!-- === CARRINHO DE COMPRAS (Conteúdo inalterado) === -->
+            <div id="cart-container">
+                <h2>Seu Pedido</h2>
+                <ul id="cart-items">
+                    <li id="empty-cart-message">Seu carrinho está vazio.</li>
+                </ul>
+                <p id="cart-total">Total: R$ 0,00</p>
+            </div>
+
+
+            <!-- === NOVO: Confirmação do Pedido === -->
+            <div id="order-confirmation">
+                <h2>Pedido solicitado com sucesso!</h2>
+                <p>Obrigado pela sua preferência. Entraremos em contato em breve se necessário.</p>
+                <button id="back-to-start-btn" onclick="resetOrder()">Voltar ao Início</button>
+                <!-- Se "Voltar ao Início" significar ir para a PÁGINA INICIAL do seu site principal, use:
+                <button onclick="window.location.href='/'">Voltar ao Início</button>
+                Substitua '/' pelo link da sua página inicial se for diferente.
+                -->
+            </div>
+            <!-- === FIM NOVO === -->
+
+
+        </div> <!-- Fim de .menu-order-container -->
+
+
+        <script>
+            let cart = [];
+            let currentStep = 1;
+
+
+            const cartItemsList = document.getElementById('cart-items');
+            const cartTotalElement = document.getElementById('cart-total');
+            const allSteps = document.querySelectorAll('.step');
+            const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+            const emptyCartMessage = document.getElementById('empty-cart-message');
+            const paymentRadios = document.querySelectorAll('input[name="payment_method"]');
+            const trocoInput = document.getElementById('troco_para');
+
+
+            // --- NOVO: Referências aos elementos principais e de confirmação ---
+            const orderStepsContainer = document.getElementById('order-steps');
+            const cartContainer = document.getElementById('cart-container');
+            const orderConfirmationContainer = document.getElementById('order-confirmation');
+            const addressForm = document.getElementById('address-form'); // Referência ao formulário
+            const paymentForm = document.getElementById('payment-form'); // Referência ao formulário
+
+
+            // --- Funções do Carrinho (inalteradas) ---
+            function updateCartDisplay() {
+                cartItemsList.innerHTML = '';
+                let total = 0;
+                if (cart.length === 0) {
+                    emptyCartMessage.style.display = 'list-item';
+                    cartItemsList.appendChild(emptyCartMessage);
+                } else {
+                    emptyCartMessage.style.display = 'none';
+                    cart.forEach((item, index) => {
+                        const listItem = document.createElement('li');
+                        listItem.innerHTML = `
+                            <span>${item.name}</span>
+                            <span>R$ ${item.price.toFixed(2).replace('.', ',')}</span>
+                            <button onclick="removeFromCart(${index})" style="background: #dc3545; font-size: 0.8em; padding: 3px 6px; margin-left: 10px;">X</button>
+                        `;
+                        cartItemsList.appendChild(listItem);
+                        total += item.price;
+                    });
+                }
+                cartTotalElement.textContent = `Total: R$ ${total.toFixed(2).replace('.', ',')}`;
+            }
+
+
+            function addToCart(name, price) {
+                const item = { name, price: parseFloat(price) };
+                cart.push(item);
+                updateCartDisplay();
+            }
+
+
+            function removeFromCart(index) {
+                if (index >= 0 && index < cart.length) {
+                    cart.splice(index, 1);
+                    updateCartDisplay();
+                }
+            }
+
+
+            // --- Funções de Navegação das Etapas (inalteradas) ---
+            function changeStep(targetStep) {
+                if (currentStep === 3 && targetStep > currentStep) {
+                    if (!addressForm.checkValidity()) {
+                        alert("Por favor, preencha todos os campos obrigatórios do endereço.");
+                        const firstInvalid = addressForm.querySelector(':invalid');
+                        if(firstInvalid) firstInvalid.focus();
+                        return;
+                    }
+                }
+
+
+                const currentStepElement = document.getElementById(`step-${getStepId(currentStep)}`);
+                if (currentStepElement) currentStepElement.classList.remove('active');
+
+
+                currentStep = targetStep;
+                const nextStepElement = document.getElementById(`step-${getStepId(currentStep)}`);
+                if (nextStepElement) {
+                    nextStepElement.classList.add('active');
+                    window.scrollTo(0, 0);
+                }
+            }
+
+
+            function getStepId(stepNumber) {
+                switch(stepNumber) {
+                    case 1: return 'lanche';
+                    case 2: return 'bebida';
+                    case 3: return 'endereco';
+                    case 4: return 'pagamento';
+                    default: return '';
+                }
+            }
+
+
+            // --- Função Finalizar Pedido (MODIFICADA) ---
+            function finalizeOrder() {
+                // Validações iniciais (carrinho e endereço)
+                if (cart.length === 0) {
+                    alert("Seu carrinho está vazio. Adicione itens antes de finalizar.");
+                    changeStep(1);
+                    return;
+                }
+                if (!addressForm.checkValidity()) {
+                    alert("Por favor, preencha todos os campos obrigatórios do endereço.");
+                    changeStep(3);
+                    const firstInvalid = addressForm.querySelector(':invalid');
+                    if(firstInvalid) firstInvalid.focus();
+                    return;
+                }
+
+
+                // Coleta de dados (mantida, mas sem o alert final)
+                const nome = document.getElementById('nome').value;
+                const telefone = document.getElementById('telefone').value;
+                const cep = document.getElementById('cep').value;
+                const endereco = document.getElementById('endereco').value;
+                const complemento = document.getElementById('complemento').value;
+                const referencia = document.getElementById('referencia').value;
+                const selectedPayment = document.querySelector('input[name="payment_method"]:checked');
+                const paymentMethod = selectedPayment ? selectedPayment.value : 'Nenhum selecionado';
+                let trocoInfo = '';
+                if (paymentMethod === 'dinheiro' && trocoInput.value) {
+                    trocoInfo = ` (Troco para: ${trocoInput.value})`;
+                }
+                const observacoes = document.getElementById('observacoes').value;
+
+
+                const orderData = {
+                    items: cart,
+                    total: cart.reduce((sum, item) => sum + item.price, 0),
+                    address: { nome, telefone, cep, endereco, complemento, referencia },
+                    payment: paymentMethod + trocoInfo,
+                    observations: observacoes
+                };
+
+
+                // --- SUBSTITUIÇÃO DO ALERT ---
+                // 1. Log (ou envie para o backend aqui!)
+                console.log("Pedido Finalizado:", orderData);
+                // Exemplo de como você enviaria para um backend (descomente e adapte):
+                /*
+                fetch('/api/seu-endpoint-de-pedido', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(orderData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Resposta do servidor:', data);
+                    // Só mostra a confirmação se o envio for bem-sucedido
+                    showConfirmationScreen();
+                })
+                .catch(error => {
+                    console.error('Erro ao enviar pedido:', error);
+                    alert('Houve um erro ao enviar seu pedido. Tente novamente.');
+                });
+                */
+
+
+                // 2. Mostra a tela de confirmação (chamada direta por enquanto, mas idealmente dentro do .then do fetch)
+                showConfirmationScreen();
+            }
+
+
+            // --- NOVO: Função para mostrar a tela de confirmação ---
+            function showConfirmationScreen() {
+                orderStepsContainer.style.display = 'none'; // Oculta as etapas
+                cartContainer.style.display = 'none'; // Oculta o carrinho
+                orderConfirmationContainer.style.display = 'block'; // Mostra a confirmação
+                window.scrollTo(0, 0); // Rola para o topo
+            }
+
+
+            // --- NOVO: Função para Resetar o Pedido (chamada pelo botão "Voltar ao Início") ---
+            function resetOrder() {
+                // Oculta confirmação
+                orderConfirmationContainer.style.display = 'none';
+
+
+                // Limpa o carrinho
+                cart = [];
+                updateCartDisplay();
+
+
+                // Reseta formulários
+                addressForm.reset();
+                paymentForm.reset();
+                trocoInput.style.display = 'none'; // Garante que o campo troco suma
+                document.querySelector('input[name="payment_method"][value="pix"]').checked = true; // Reseta para o padrão
+
+
+                // Mostra o conteúdo principal novamente
+                orderStepsContainer.style.display = 'block';
+                cartContainer.style.display = 'block';
+
+
+                // Volta para a primeira etapa
+                changeStep(1); // Usa changeStep para garantir a classe 'active' correta
+
+
+                // Scroll para o topo (já feito pelo changeStep)
+            }
+
+
+
+
+            // --- Event Listeners (sem alterações significativas) ---
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const name = event.target.getAttribute('data-name');
+                    const price = event.target.getAttribute('data-price');
+                    if (name && price) {
+                        addToCart(name, price);
+                    }
+                });
+            });
+
+
+            paymentRadios.forEach(radio => {
+                radio.addEventListener('change', (event) => {
+                    trocoInput.style.display = (event.target.value === 'dinheiro') ? 'block' : 'none';
+                    if (event.target.value !== 'dinheiro') {
+                        trocoInput.value = '';
+                    }
+                });
+            });
+
+
+            // --- Inicialização ---
+            updateCartDisplay();
+
+
+        </script>
+
+
+        <!-- Fim do Código do Cardápio -->
+
+
+        <!-- ESTRUTURA DO FOOTER ABAIXO -->
+
+        <div class="main-container">
+            <footer>
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h3>Sobre Nós</h3>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58521.59090583094!2d-46.60264963500565!3d-23.546905479513466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce662d5569af7f%3A0xd3ad022cadc05ffc!2sTch%C3%AA%20lanches%20S%C3%A3o%20Mateus!5e0!3m2!1spt-BR!2sbr!4v1743199952241!5m2!1spt-BR!2sbr" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contato</h3>
+                        <ul>
+                            <li>
+                                <a href="tel:11955222255"><img src="imagens/whatsapp.png" alt="" id="whatsapp">Entre em contato pelo nosso WhatsApp: (11) 95522-2255</a>
+                            </li>
+                            <br>
+                            <li>
+                                <a href="mailto:contato@dogaodojao.com.br">Email: contato@dogaodojao.com.br</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Formas de pagamento</h3>
+                        <ul>
+                            <img src="imagens/pagamento/visa.png" alt="visa">
+                            <img src="imagens/pagamento/alelo.png" alt="alelo">
+                            <img src="imagens/pagamento/dinheiro.png" alt="dinheiro">
+                            <img src="imagens/pagamento/pix.png" alt="pix">
+                            <img src="imagens/pagamento/mastercard.png" alt="mastercard">
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Siga-nos</h3>
+                        <div class="social-icons">
+                            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 Wesley Tales. Todos os direitos reservados.
+                </div>
+            </footer>
+        </div>
+
+        <script src="menu.js"></script>
+        <script src="bt_flutuante.js"></script>
+        <script src="slider.js"></script>
+        <script src="queridinhos.js"></script>
+    </body>
+</html>

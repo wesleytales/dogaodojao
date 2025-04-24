@@ -1,0 +1,1408 @@
+/* Color Theme Swatches in Hex */
+.paleta-1-hex { color: #F21326; }
+.paleta-2-hex { color: #F2D95C; }
+.paleta-3-hex { color: #F2785C; }
+.paleta-4-hex { color: #400101; }
+.paleta-5-hex { color: #A61C1C; }
+
+body {
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    background-color: #F2D95C;
+}
+
+/* MENU ABAIXO */
+
+header {
+    background-color: #ff0000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    top: 0;
+    width: 100%;
+    height: 65px;
+    position: sticky;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.logo-hover {
+    display: none; /* Oculta o GIF de hover inicialmente */
+    animation-iteration-count: 2; /* Repete a animação 2 vezes */
+}
+
+.logo:hover .logo-normal {
+    display: none; /* Oculta o GIF normal no hover */
+}
+
+.logo:hover .logo-hover {
+    display: inline-block; /* Mostra o GIF de hover no hover */
+}
+
+.logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo a img {
+    max-height: 50px;
+}
+
+.desktop-menu {
+    display: none;
+}
+
+.desktop-menu a {
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.desktop-menu img {
+    max-width: 30px;
+}
+
+.desktop-menu a:hover {
+    color: black;
+    background-color: white;
+    transform: scale(1.1);
+    border-radius: 10px;
+}
+
+.desktop-menu a:last-child {
+    margin-right: 20px;
+}
+
+.desktop-menu span {
+    vertical-align: middle;
+}
+
+.mobile-menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.menu-items {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -40vw;
+    height: 100vh;
+    width: 40vw;
+    background-color: #d4a300;
+    flex-direction: column;
+    padding-top: 0px;
+    transition: right 0.3s ease-in-out;
+}
+
+.menu-items a {
+    font-family: "Roboto", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px;
+    border-bottom: 1px solid #555;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-items img {
+    max-width: 30px;
+    display: inline-block;
+    text-align: center;
+}
+
+.menu-items a:hover {
+    color: black;
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.menu-items span {
+    vertical-align: middle;
+}
+
+.menu-items.show {
+    display: flex;
+    right: 0;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    align-self: flex-end;
+    padding: 10px;
+}
+
+@media (min-width: 768px) {
+    .desktop-menu {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+}
+
+/* ABAIXO ESTILO DO FOOTER */
+
+.main-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: #A61C1C;
+    color: white;
+    padding: 35px 0;
+    margin-top: 60px;
+}
+
+footer h3 {
+    color: #F2D95C;
+    /* margin-bottom: 20px; */ /* Você pode ajustar ou remover esta margem */
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    /* ADICIONADO PARA ALINHAMENTO */
+    display: inline-flex; /* Usa flexbox mantendo o comportamento inline do link */
+    align-items: center;   /* Alinha verticalmente o ícone e o texto */
+    gap: 6px;             /* Espaço entre o ícone e o texto (ajuste se necessário) */
+}
+
+footer ul li a:hover {
+    color: #F2D95C;
+}
+
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1; /* Permite que as colunas cresçam e encolham */
+    min-width: 250px; /* Largura mínima para cada coluna */
+    margin-bottom: 20px; /* Aumenta um pouco o espaço inferior entre colunas empilhadas */
+    text-align: center; /* Centraliza o texto por padrão dentro da coluna */
+    /* --- ADICIONAR/MODIFICAR PARA ALINHAMENTO INTERNO --- */
+    display: flex;           /* Torna a coluna um flex container */
+    flex-direction: column; /* Organiza os itens filhos (h3, ul, iframe, etc.) verticalmente */
+    justify-content: flex-start; /* Alinha o CONTEÚDO (o bloco de itens) verticalmente ao TOPO da coluna */
+    align-items: center;     /* Alinha os ITENS filhos horizontalmente ao CENTRO da coluna */
+    padding: 15px;           /* Adiciona um espaçamento interno para não colar nas bordas */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+.footer-column h3 {
+    width: 100%; /* Garante que o h3 ocupe a largura para text-align funcionar bem */
+    text-align: center; /* Confirma a centralização do texto */
+    /* margin-bottom: auto; */ /* Se você quer que o título fique no topo e o resto embaixo */
+    margin-top: 0; /* Garante que não haja margem no topo do h3 */
+}
+
+#whatsapp {
+    max-width: 20px; /* Ajuste o tamanho conforme necessário */
+    height: auto;     /* Mantém a proporção */
+    /* Reset/Override de estilos conflitantes de .footer-column img */
+    width: auto;
+    margin-top: 0;
+    border-radius: 0;
+    /* display: inline-block; é redundante com flex, mas vertical-align ajuda */
+    vertical-align: middle;
+}
+
+/* Aplica APENAS às imagens de pagamento (filhas diretas da UL) */
+.footer-column ul > img { /* Use '>' para selecionar filhos diretos */
+    display: inline-block;
+    width: 15%;
+    height: auto;
+    /* text-align: center; Não afeta a imagem diretamente */
+    border-radius: 10px;
+    /* margin-top: 50px;  << Considere se este valor está correto ou se deve ser menor/aplicado à UL */
+    margin: 10px 5px; /* Exemplo de margem mais controlada */
+    transition: transform 0.3s ease-in-out; /* Corrigido de 'right' */
+}
+
+/* Hover APENAS para as imagens de pagamento */
+.footer-column ul > img:hover {
+    transform: scale(1.2);
+    /* Os margins no hover podem causar "saltos" no layout, talvez remova-os */
+    /* margin-left: 15px; */
+    /* margin-right: 15px; */
+}
+
+
+.footer-column ul {
+    text-align: center;
+    margin-top: 0; /* Garante que não haja margem no topo da lista */
+}
+
+.footer-column iframe {
+    display: block; /* Garante que a margem auto funcione corretamente */
+    margin: 0 auto; /* Centraliza o iframe horizontalmente */
+    text-align: center; /* Garante que o conteúdo interno esteja centralizado (redundante aqui, mas útil em outros casos) */
+    margin-top: 0; /* Garante que não haja margem no topo do iframe */
+}
+
+.footer-column ul li {
+    text-align: center;
+    padding: 0 10px;
+    margin: 0 25px;
+}
+
+.footer-column:last-child {
+    margin-bottom: 0;
+}
+
+.social-icons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 30px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #F2D95C;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+    }
+    .footer-column {
+        margin-bottom: 30px;
+    }
+    .footer-column:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 30px 10px;
+    }
+    footer h3 {
+        font-size: 1.6rem;
+    }
+    .copyright {
+        font-size: 0.8rem;
+    }
+}
+
+/* ESTILO DO BOTÃO FLUTUANTE ABAIXO */
+
+/* Container Principal do FAB */
+.fab-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px; /* <<-- Alinhado à DIREITA */
+    z-index: 1000;
+    display: flex;
+    align-items: flex-end; /* Alinha na base */
+    /* IMPORTANTE: Define a ordem visual dos itens flex */
+    /* Os itens são colocados da direita para a esquerda */
+    flex-direction: row-reverse; /* <<-- Faz abrir para a ESQUERDA */
+    gap: 15px; /* Espaço entre principal e opções */
+}
+
+/* Estilo Base para TODOS os botões */
+.fab-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #95a5a6; /* Cor base neutra */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transição geral */
+    position: relative;
+    overflow: hidden;
+}
+.fab-button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+.fab-button img {
+    display: block; /* Evita espaços extras */
+    max-width: 60%; /* Ajuste conforme necessário */
+    height: auto;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Botão Principal */
+.fab-main {
+    width: 60px;
+    height: 60px;
+    background-color: #F21326; 
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.3s ease; /* Transição específica para rotação */
+}
+.fab-main img {
+     max-width: 65%; /* Ícone um pouco menor no botão maior */
+     position: absolute; /* Para sobrepor open/close */
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%); /* Centraliza absoluto */
+}
+.fab-main .icon-open { opacity: 1; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+.fab-main .icon-close { opacity: 0; transform: translate(-50%, -50%) rotate(-90deg) scale(0); }
+
+
+/* Container das Opções */
+.fab-options {
+    display: flex; /* Para alinhar as opções entre si */
+    /* A ordem visual DENTRO deste container é normal (esquerda para direita) */
+    /* Mas como o .fab-container é row-reverse, este bloco inteiro fica à esquerda do .fab-main */
+    flex-direction: row; /* Ou pode omitir, row é o padrão */
+    gap: 15px; /* Espaço ENTRE as opções */
+    /* Inicialmente escondido */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(20px); /* Leve deslocamento da direita para animação */
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s, transform 0.3s ease;
+}
+
+/* Botões de Opção */
+.fab-option {
+    width: 45px;
+    height: 45px;
+    background-color: #bdc3c7; /* Cinza */
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+/* Cores específicas ao passar o mouse */
+.fab-option:nth-child(1):hover { background-color: #c0392b; } /* Opção 2 (mais à esquerda) */
+.fab-option:nth-child(2):hover { background-color: #2980b9; } /* Opção 1 (mais à direita) */
+
+
+/* --- ESTADO ATIVO --- */
+.fab-container.active .fab-options {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    transition-delay: 0s;
+}
+
+.fab-container.active .fab-main {
+    transform: rotate(135deg); /* Gira */
+    background-color: #e74c3c; /* Vermelho */
+}
+
+.fab-container.active .fab-main .icon-open { opacity: 0; transform: translate(-50%, -50%) rotate(90deg) scale(0); }
+.fab-container.active .fab-main .icon-close { opacity: 1; transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+
+/* Animação escalonada para as opções aparecerem (da direita para a esquerda) */
+.fab-container.active .fab-option {
+    opacity: 1;
+    transform: scale(1);
+}
+/* nth-child(1) é o primeiro .fab-option no HTML (Opção 2 - mais à esquerda) */
+/* nth-child(2) é o segundo .fab-option no HTML (Opção 1 - mais à direita) */
+
+/* Queremos que a Opção 1 (mais próxima do botão principal) apareça primeiro */
+.fab-container.active .fab-option:nth-child(2) { /* Opção 1 */
+    transition-delay: 0.1s;
+    background-color: #3498db; /* Azul */
+}
+.fab-container.active .fab-option:nth-child(1) { /* Opção 2 */
+    transition-delay: 0.2s; /* Aparece depois */
+    background-color: #e74c3c; /* Vermelho/Laranja */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .fab-container {
+        bottom: 20px;
+        right: 20px;
+        gap: 10px;
+    }
+    .fab-main { width: 55px; height: 55px; }
+    .fab-option { width: 40px; height: 40px; }
+    .fab-options { gap: 10px; }
+}
+
+/* SLIDES */
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 0px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+/* Media query para dispositivos móveis (largura máxima de 768px) */
+@media (max-width: 768px) {
+    .buy-button {
+        display: none; /* Oculta o botão */
+    }
+}
+
+/* ESTILO DO LOGIN */
+
+body.dark-mode {
+    background-color: #121212;
+    background-image: url('imagens/formulario/padrão-escuro.png'); /* Imagem placeholder para dark mode */
+}
+
+.container {
+    background-color: #A61C1C;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra mais sutil */
+    padding: 30px;
+    width: 100%;
+    max-width: 600px; /* Largura máxima um pouco maior */
+    transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Transições para o modo escuro */
+    box-sizing: border-box;
+    /* margin-top: 60px; <-- REMOVE THIS LINE or keep it if you want additional bottom margin */
+    /* ADD THESE LINES FOR CENTERING */
+    margin-left: auto;
+    margin-right: auto;
+    /* OPTIONAL: Combine top margin with auto horizontal margins */
+    margin-top: 60px; /* Keeps the space above */
+    margin-bottom: 60px; /* Optional: Add space below too */
+    /* OR simplified: margin: 60px auto; (Sets top/bottom to 60px, left/right to auto) */
+}
+
+.container.dark-mode {
+    background-color: #1f1f1f;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    color: #F2D95C;
+    text-align: center;
+    margin-bottom: 25px;
+    transition: color 0.5s ease;
+}
+
+h1.dark-mode {
+    color: #f0f0f0;
+}
+
+.form-group {
+    margin-bottom: 22px; /* Aumentei o espaçamento */
+}
+
+label {
+    display: block;
+    font-weight: 500;
+    color: #F2D95C;
+    margin-bottom: 8px;
+    transition: color 0.5s ease;
+}
+
+label.dark-mode {
+    color: #e0e0e0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px; /* Aumentei o tamanho da fonte */
+    transition: border-color 0.3s ease, background-color 0.5s ease, color 0.5s ease; /* Transições adicionais */
+    background-color: #ffffff;
+    color: #4d4d4d;
+}
+
+input[type="text"].dark-mode,
+input[type="email"].dark-mode,
+input[type="tel"].dark-mode,
+select.dark-mode {
+    border-color: #4d4d4d;
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    border-color: #F2785C; /* Cor de foco mais viva */
+    outline: none; /* Remove o contorno padrão do navegador */
+    box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.2); /* Adiciona uma sombra de foco */
+}
+
+select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    padding-right: 30px; /* Espaço para a seta do select */
+}
+
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.select-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #7f8c8d; /* Cor da seta */
+    pointer-events: none;
+    transition: border-color 0.5s ease;
+}
+
+.select-wrapper.dark-mode::after {
+    border-top-color: #f0f0f0;
+}
+
+.btn-primary {
+    background-color: #F2785C;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px; /* Aumentei o tamanho da fonte */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transições adicionais */
+    width: 100%; /* Botões ocupam a largura total */
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: #c94b2f;
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    background-color: #F2785C;
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background-color: #e2e8f0;
+    color: #2c3e50;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.5s ease;
+    width: 100%;
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.btn-secondary.dark-mode {
+    background-color: #4a5568;
+    color: #f0f0f0;
+}
+
+.btn-secondary:hover {
+    background-color: #cbd5e0;
+    transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+    background-color: #a0aec0;
+    transform: translateY(0);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-5 {
+    margin-top: 20px;
+}
+
+.text-gray-700 {
+    color: #ffffff;
+    transition: color 0.5s ease;
+}
+
+.text-gray-700.dark-mode {
+    color: #d1d5db;
+}
+
+.material-icons {
+    margin-right: 8px;
+    vertical-align: middle;
+    font-size: 24px;
+}
+
+.password-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.password-input-container input {
+    padding-right: 40px;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #7f8c8d;
+    transition: color 0.3s ease;
+}
+
+.password-toggle-icon.dark-mode {
+    color: #f0f0f0;
+}
+
+.error-message {
+    color: #e53e3e;
+    font-size: 14px;
+    margin-top: 8px;
+    display: none;
+    padding: 10px;
+    background-color: #ffe0e0;
+    border-radius: 6px;
+    border: 1px solid #e53e3e;
+}
+
+.error-message.show {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .material-icons {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .material-icons {
+        font-size: 18px;
+    }
+}
+
+/* --- Alterar cor dos links "Faça Login" e "Voltar ao inicio" --- */
+.container .text-center.mt-5 p a {
+    /* Define a cor base para cinza */
+    color: #ffffff; /* Um tom de cinza padrão (Bootstrap gray) - ajuste se preferir outro */
+    /* Alternativas de cinza: #888888 (médio), #A9A9A9 (escuro), #D3D3D3 (claro) */
+    text-decoration: none; /* Remove sublinhado padrão, se houver */
+    font-weight: 500; /* Pode ajustar o peso da fonte se desejar */
+    transition: color 0.3s ease; /* Transição suave para o hover */
+}
+
+/* Define a cor do hover para um cinza mais escuro ou outra cor */
+.container .text-center.mt-5 p a:hover {
+    color: #000000; /* Cinza mais escuro no hover */
+    text-decoration: underline; /* Adiciona sublinhado no hover para indicar clicabilidade */
+}
+
+/* Opcional: Estilizar o ícone 'arrow_back' se necessário */
+.container .text-center.mt-5 p a .material-icons {
+    color: inherit; /* Faz o ícone herdar a cor cinza do link */
+    vertical-align: bottom; /* Ajusta alinhamento vertical do ícone */
+}
+
+
+#queridinhos {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px;
+    background-color: #F21326;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    #queridinhos {
+        font-size: 1em;
+        padding: 15px;
+    }
+}
+
+/* QUERIDINHOS ABAIXO */
+
+.exibicao-container {
+    width: 90%; /* Largura responsiva */
+    max-width: 600px; /* Largura máxima para mobile */
+    overflow: hidden;
+    position: relative; /* Essencial para posicionar os botões filhos absolutamente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+    perspective: 500px; /* Adiciona perspectiva para o efeito 3D */
+
+    /* --- ADICIONE/MODIFIQUE ESTAS LINHAS PARA CENTRALIZAR --- */
+    margin-top: 30px;      /* Adiciona espaço acima (ajuste o valor conforme necessário) */
+    margin-bottom: 30px;   /* Adiciona espaço abaixo (ajuste ou remova se não precisar) */
+    margin-left: auto;     /* Centraliza horizontalmente */
+    margin-right: auto;    /* Centraliza horizontalmente */
+    /* Você pode usar a forma curta: margin: 30px auto; (define top/bottom para 30px, left/right para auto) */
+    /* --- FIM DAS LINHAS DE CENTRALIZAÇÃO --- */
+}
+
+.lista-exibicoes {
+    display: flex;
+    transition: transform 0.5s ease-out; /* Transição suave */
+    transform-style: preserve-3d; /* Para transformações 3D nos filhos */
+}
+
+.item-exibicao {
+    /* Mobile: O JS definirá flex-basis para 100% da largura do container */
+    /* Desktop: A regra @media abaixo definirá largura fixa */
+    flex-shrink: 0; /* Impede que os itens encolham */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Espaçamento interno padrão */
+    box-sizing: border-box;
+    transform: scale(0.7); /* Começa um pouco menor */
+    opacity: 0.4; /* Começa um pouco transparente */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    /* A largura/flex-basis será ajustada pelo JS e pela media query */
+}
+
+.item-exibicao.central {
+    transform: scale(1); /* Item central no tamanho normal */
+    opacity: 1; /* Item central totalmente opaco */
+    padding: none;
+    border: 3px solid #F2785C;
+    border-radius: 50px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+.item-exibicao img {
+    max-width: 80%; /* Imagem responsiva dentro do item */
+    height: auto; /* Mantém proporção */
+    max-height: 150px; /* Limita altura da imagem */
+    border: 5px solid #A61C1C;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    object-fit: contain; /* Garante que a imagem caiba sem distorcer */
+    margin-top: 20px;
+}
+
+.item-exibicao-nome > p {
+    text-align: center;
+    color: #400101;
+    margin-bottom: 10px;
+}
+
+.item-exibicao-nome > h2 {
+    text-align: center;
+    font-weight: bolder;
+    color: #F21326;
+}
+
+/* --- Estilos Padrão dos Botões (Agora Iguais ao Desktop) --- */
+#prevBtn,
+#nextBtn {
+    position: absolute; /* Posicionamento absoluto em relação ao .exibicao-container */
+    top: 0;
+    bottom: 0; /* Estica a área clicável verticalmente */
+    height: 100%; /* Garante altura total */
+    width: 50px; /* Largura do botão */
+    background-color: rgba(255, 0, 0, 0.6); /* Fundo vermelho semitransparente */
+    color: white; /* Cor do ícone/texto */
+    font-size: 24px;
+    border: none; /* Remove borda padrão */
+    cursor: pointer;
+    display: flex; /* Para centralizar o conteúdo do botão */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    opacity: 0.7; /* Opacidade inicial */
+    transition: opacity 0.3s ease, background-color 0.3s ease; /* Transição suave no hover */
+    z-index: 10; /* Garante que fiquem sobre os slides */
+    padding: 0; /* Remove padding padrão */
+    margin: 0; /* Remove margem padrão */
+    border-radius: 0; /* Remove arredondamento padrão (será aplicado especificamente) */
+}
+
+#prevBtn:hover,
+#nextBtn:hover {
+    opacity: 1; /* Opacidade total no hover */
+    background-color: rgba(255, 0, 0, 0.8); /* Vermelho um pouco mais escuro no hover */
+}
+
+#prevBtn {
+    left: 0; /* Posiciona na esquerda */
+    border-top-left-radius: 8px; /* Arredonda canto superior esquerdo (igual ao container) */
+    border-bottom-left-radius: 8px; /* Arredonda canto inferior esquerdo (igual ao container) */
+}
+
+#nextBtn {
+    right: 0; /* Posiciona na direita */
+    border-top-right-radius: 8px; /* Arredonda canto superior direito (igual ao container) */
+    border-bottom-right-radius: 8px; /* Arredonda canto inferior direito (igual ao container) */
+}
+/* --- Fim dos Estilos Padrão dos Botões --- */
+
+
+/* Estilos específicos para desktop (para ajustar layout dos slides) */
+@media (min-width: 768px) {
+    .exibicao-container {
+        /* A largura máxima maior para desktop */
+        max-width: 90%;
+        /* As margens auto adicionadas acima já funcionarão aqui também */
+    }
+
+    .item-exibicao {
+        flex: 0 0 auto; /* Não cresce nem encolhe, mantém tamanho */
+        width: 300px; /* Largura fixa para itens no desktop */
+        padding: 10px; /* Ajusta padding para desktop */
+        /* O flex-basis: '' será aplicado pelo JS para garantir que a width CSS funcione */
+    }
+
+    /* Os estilos dos botões (#prevBtn, #nextBtn) já estão definidos globalmente */
+
+    /* Oculta a div .botoes-controle se ela existisse (não está no seu HTML atual) */
+    .botoes-controle {
+        display: none;
+    }
+}
+
+/* DESIGN FLAT ABAIXO */
+
+.guia-de-pedido {
+    display: block;
+    width: 90%;
+    max-width: 1200px; /* Aumentei um pouco o container geral, opcional */
+    margin: 50px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px; /* Espaço entre blocos */
+    text-align: center;
+}
+
+.flat-guia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* flex: 1; <-- REMOVA OU COMENTE ESTA LINHA */
+    width: 30%; /* Tente usar porcentagem para dividir o espaço */
+    max-width: 350px; /* Defina um max-width mais realista para cada item */
+    min-width: 280px;
+    font-weight: bold;
+    box-sizing: border-box; /* Inclui padding/border na largura/altura */
+}
+
+.flat-guia img {
+    display: block;
+    width: 100%; /* Faz a imagem tentar ocupar toda a largura do .flat-guia */
+    max-width: 100%; /* Garante que não exceda o container */
+    height: auto; /* Mantém a proporção */
+    /* max-height: none; <-- Garanta que não haja limite de altura no desktop */
+    margin-bottom: 15px;
+}
+
+.flat-guia p { /* Seleciona o parágrafo DENTRO de .flat-guia */
+    /* Estilos anteriores */
+    margin: 0;
+    padding: 0 10px; /* Mantém o padding lateral */
+    box-sizing: border-box;
+    max-width: 100%; /* Permite ocupar a largura do bloco .flat-guia */
+
+    /* --- NOVOS ESTILOS PARA ELEGÂNCIA E DESTAQUE --- */
+
+    font-family: 'Roboto', sans-serif; /* Garante a fonte */
+    font-size: 1.1em; /* Um pouco maior que o padrão (ajuste se necessário) */
+    font-weight: 500; /* Peso médio - um bom equilíbrio */
+    color: #400101; /* Cor marrom escura da sua paleta - forte contraste e temático */
+    /* Alternativa de cor: color: #333; (Cinza escuro mais padrão) */
+    line-height: 1.5; /* Aumenta um pouco o espaço entre linhas para melhor leitura */
+    letter-spacing: 0.5px; /* Espaçamento sutil entre letras (opcional) */
+
+    padding-top: 15px; /* Adiciona espaço ACIMA do texto para a linha separadora */
+    margin-top: 10px; /* Ajusta a margem superior geral do parágrafo */
+    position: relative; /* Necessário para posicionar o pseudo-elemento ::before */
+}
+
+/* Adiciona uma linha decorativa acima do parágrafo */
+.flat-guia p::before {
+    content: ""; /* Essencial para pseudo-elementos */
+    position: absolute;
+    top: 0; /* Posiciona no topo da área de padding do parágrafo */
+    left: 50%; /* Começa no centro horizontal */
+    transform: translateX(-50%); /* Centraliza a linha precisamente */
+    width: 60px; /* Largura da linha decorativa */
+    height: 3px; /* Espessura da linha */
+    background-color: #F21326; /* Cor vermelha principal da sua paleta */
+    border-radius: 2px; /* Bordas levemente arredondadas para a linha */
+}
+
+/* Responsividade para Mobile */
+@media (max-width: 768px) {
+    .guia-de-pedido {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        width: 95%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .flat-guia {
+       width: 90%; /* Ajusta a largura no mobile */
+       max-width: 90%; /* Garante que ocupe a largura definida */
+       min-width: auto;
+    }
+
+    .flat-guia img {
+        max-height: 200px; /* Mantém o limite de altura no mobile */
+        width: auto; /* Permite que a largura se ajuste à altura limitada no mobile */
+        max-width: 100%; /* Mas não maior que o container */
+    }
+
+    .flat-guia p {
+        font-size: 1em; /* Pode voltar ao tamanho padrão ou um pouco menor no mobile */
+        line-height: 1.4;
+        letter-spacing: normal; /* Remove espaçamento extra no mobile */
+        margin-top: 5px;
+        padding-top: 12px;
+    }
+
+    .flat-guia p::before {
+        width: 50px; /* Linha um pouco menor */
+        height: 2px; /* Linha um pouco mais fina */
+    }
+
+     /* Garante que o max-width do mobile seja respeitado */
+     .flat-guia p {
+        max-width: 100%;
+     }
+}
+
+/* ESTILO DA PAGINA QUEM SOMOS ABAIXO */
+
+/* ===== SOBRE NÓS ===== */
+.sobre-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.sobre-imagem {
+    flex: 0 0 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    background-color: #F2785C;
+    box-shadow: 0 4px 20px rgba(166, 28, 28, 0.2);
+    
+}
+
+.sobre-conteudo {
+    flex: 1;
+}
+
+.sobre-titulo {
+    color: #F21326;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    font-weight: 900;
+}
+
+.sobre-subtitulo {
+    color: #F21326;
+    font-size: 1.8rem;
+    margin: 25px 0 15px;
+}
+
+.sobre-texto {
+    color: #400101;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.sobre-lista {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sobre-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.sobre-item::before {
+    content: "▸";
+    color: #F2785C;
+    position: absolute;
+    left: 0;
+    font-size: 1.4rem;
+}
+
+/* ===== VÍDEO ===== */
+.video-container {
+    background: #F2D95C;
+    padding: 60px 20px;
+    margin: 80px 0;
+}
+
+.video-titulo {
+    color: #F21326;
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    font-weight: 900;
+}
+
+.video-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(166, 28, 28, 0.3);
+}
+
+.video-embed {
+    width: 100%;
+    height: 500px;
+    display: block;
+    border: none;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 992px) {
+    .sobre-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .sobre-imagem {
+        flex: none;
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre-titulo {
+        font-size: 2.2rem;
+    }
+    
+    .video-embed {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sobre-titulo {
+        font-size: 1.8rem;
+    }
+    
+    .sobre-subtitulo {
+        font-size: 1.4rem;
+    }
+    
+    .video-embed {
+        height: 250px;
+    }
+    
+    .video-titulo {
+        font-size: 2rem;
+    }
+}
+
+/* ESTILO DO CARDAPIO ABAIXO */
+
+/* --- Estilos para o Botão/Link PDF (Garantir que o estilo do ícone está ativo) --- */
+.pdf-link-container {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+a.pdf-menu-button {
+    display: inline-block;
+    background-color: #F21326;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.05em;
+    transition: background-color 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+a.pdf-menu-button:hover,
+a.pdf-menu-button:focus {
+    background-color: #b30a18;
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
+
+
+/* --- ATIVADO: Estilo para o ícone dentro do botão --- */
+a.pdf-menu-button i {
+    margin-right: 8px; /* Espaço entre ícone e texto */
+}
+/* --- FIM ATIVADO --- */
+
+
+/* Estilos Gerais e Responsividade (mantidos) */
+.menu-order-container {
+    font-family: sans-serif;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative; /* Necessário para posicionar a confirmação se desejado */
+}
+
+
+/* Estilos das Etapas (mantidos) */
+.step {
+    display: none;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #A61C1C;
+}
+.step.active { display: block; }
+.step h2 { margin-top: 0; color: #F2D95C; border-bottom: 2px solid #F21326; padding-bottom: 10px; margin-bottom: 20px; }
+
+
+/* Layout dos Itens do Cardápio (mantidos) */
+.menu-items-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.menu-item { border: 1px solid #ddd; border-radius: 5px; padding: 15px; text-align: center; background-color: #fff; display: flex; flex-direction: column; justify-content: space-between; }
+.menu-item img { max-width: 100%; height: 100%; object-fit: cover; border-radius: 5px; margin-bottom: 10px; }
+.menu-item h3 { margin: 10px 0 5px 0; font-size: 1.1em; color: #444; }
+.menu-item .description { font-size: 0.9em; color: #666; flex-grow: 1; margin-bottom: 10px; }
+.menu-item .price { font-weight: bold; color: #A61C1C; margin-bottom: 15px; font-size: 1.1em; }
+.menu-item button, .step-nav button, #cart-container button, #order-confirmation button /* Estilo para o novo botão */ { background-color: #F21326; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-size: 1em; transition: background-color 0.3s ease; }
+.menu-item button:hover, .step-nav button:hover, #cart-container button:hover, #order-confirmation button:hover { background-color: #400101; }
+
+
+/* Navegação entre Etapas (mantidos) */
+.step-nav { margin-top: 20px; display: flex; justify-content: space-between; }
+.step-nav button.prev-btn { background-color: #F2785C; color: #ffffff; }
+.step-nav button.prev-btn:hover { background-color: #f59782; }
+
+
+/* Estilos do Carrinho (mantidos) */
+#cart-container { margin-top: 30px; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #f0f0f0; }
+#cart-container h2 { margin-top: 0; color: #333; border-bottom: 2px solid #A61C1C; padding-bottom: 10px; }
+#cart-items { list-style: none; padding: 0; margin-bottom: 15px; }
+#cart-items li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px dashed #ddd; }
+#cart-items li:last-child { border-bottom: none; }
+#cart-total { font-weight: bold; font-size: 1.2em; text-align: right; margin-top: 15px; color: #333; }
+
+
+/* Formulários (mantidos) */
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: bold; color: #F2D95C; }
+.form-group input[type="text"], .form-group input[type="email"], .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+.form-group textarea { resize: vertical; min-height: 80px; }
+.payment-options label { margin-right: 15px; display: inline-block; }
+
+
+/* --- NOVO: Estilos da Confirmação do Pedido --- */
+#order-confirmation {
+    display: none; /* Começa oculto */
+    padding: 40px 20px;
+    border: 1px solid #F21326; /* Borda verde sucesso */
+    border-radius: 8px;
+    background-color: #ffffff; /* Fundo verde claro */
+    text-align: center;
+    margin-top: 30px; /* Espaçamento similar ao carrinho */
+}
+#order-confirmation h2 {
+    color: #F21326; /* Texto verde escuro */
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+#order-confirmation button {
+    background-color: #F21326; /* Botão azul para diferenciar */
+    padding: 12px 25px;
+}
+#order-confirmation button:hover {
+    background-color: #A61C1C;
+}
+/* --- FIM NOVO --- */
+
+
+/* --- NOVO: Estilos para ícones de pagamento --- */
+.payment-options label i {
+    margin-left: 5px;  /* Espaço pequeno depois do radio button (se visível) */
+    margin-right: 7px; /* Espaço antes do texto da opção */
+    width: 1.25em;     /* Largura fixa para melhor alinhamento entre ícones diferentes */
+    text-align: center;/* Centraliza o ícone nessa largura */
+    color: #F2D95C;    /* Uma cor um pouco mais escura para o ícone */
+    vertical-align: middle; /* Tenta alinhar o ícone verticalmente com o texto */
+}
+/* --- FIM NOVO --- */
+
+
+
+
+/* Media Query para Mobile (mantidos e adicionado ajuste para ícones pagamento) */
+@media (max-width: 600px) {
+    .menu-items-grid { grid-template-columns: 1fr; }
+    .menu-item img { height: 120px; }
+    #cart-items li { flex-direction: column; align-items: flex-start; }
+    #cart-items li span:last-child { margin-top: 5px; font-weight: bold; }
+    .step-nav { flex-direction: column; }
+    .step-nav button { width: 100%; margin-bottom: 10px; }
+    .step-nav button:last-child { margin-bottom: 0; }
+    #order-confirmation { padding: 30px 15px; }
+    #order-confirmation h2 { font-size: 1.3em; }
+    a.pdf-menu-button { padding: 10px 15px; font-size: 1em; }
+    a.pdf-menu-button i { margin-right: 5px; }
+    /* Ajuste para opções de pagamento no mobile */
+    .payment-options label {
+        display: block; /* Faz cada opção ocupar uma linha */
+        margin-bottom: 10px; /* Adiciona espaço entre as opções */
+        margin-right: 0; /* Remove margem direita desnecessária */
+    }
+    .payment-options label i {
+        /* Mantém ou ajusta o espaçamento/tamanho se necessário */
+        margin-left: 3px;
+        margin-right: 5px;
+    }
+}

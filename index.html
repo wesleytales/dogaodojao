@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Dogão Do Jão ®</title>
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="imagens/icon-quem-somos/icon.png">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imagens/logo1.png" alt="Logo Normal" class="logo-normal">
+                    <img src="imagens/identidade-visual.gif" alt="Logo Hover" class="logo-hover">
+                </a>
+            </div>
+
+            <nav class="desktop-menu">
+                <a href="login.html"><span class="material-symbols-outlined">login</span>Login</a>
+                <a href="cadastro.html"><span class="material-symbols-outlined">person_add</span>Cadastro</a>
+                <a href="cardapio.html"><span class="material-symbols-outlined">restaurant_menu</span>Cardápio</a>
+                <a href="quem-somos.html"><span class="material-symbols-outlined">co_present</span>Quem somos</a>
+                <a href="index.html"><span class="material-symbols-outlined">undo</span>Voltar</a>
+                <a href="https://play.google.com/store/apps?hl=pt_BR" target="_blank"><img src="imagens/googleplay.png" alt=""></a>
+                <a href="https://www.apple.com/br/app-store/" target="_blank"><img src="imagens/appstore.png" alt=""></a>
+            </nav>
+
+            <div class="mobile-menu">
+                <button class="menu-button">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <nav class="menu-items">
+                    <button class="close-button">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                    <a href="https://play.google.com/store/apps?hl=pt_BR" target="_blank"><img src="imagens/googleplay.png" alt="">Google Play</a>
+                    <a href="https://www.apple.com/br/app-store/" target="_blank"><img src="imagens/appstore.png" alt="">App Store</a>
+                    <a href="login.html"><span class="material-symbols-outlined">login</span>Login</a>
+                    <a href="cadastro.html"><span class="material-symbols-outlined">person_add</span>Cadastro</a>
+                    <a href="cardapio.html"><span class="material-symbols-outlined">restaurant_menu</span>Cardápio</a>
+                    <a href="quem-somos.html"><span class="material-symbols-outlined">co_present</span>Quem somos</a>
+                    <a href="index.html"><span class="material-symbols-outlined">undo</span>Voltar</a>
+                </nav>
+            </div>
+
+        </header>
+
+        <!-- Container do Botão Flutuante -->
+        <div class="fab-container">
+            <!-- Opções (aparecem à esquerda do botão principal) -->
+            <div class="fab-options">
+                <!-- Opção mais à esquerda -->
+                <a href="https://www.ifood.com.br/" class="fab-button fab-option" target="_blank">
+                    <img src="imagens/ifood.png" alt="Opção 2">
+                </a>
+                <!-- Opção mais próxima do botão principal -->
+                <a href="cardapio.html" class="fab-button fab-option">
+                    <img src="imagens/store.png" alt="Opção 1">
+                </a>
+            </div>
+
+            <!-- Botão Principal (aparece mais à direita) -->
+            <a href="#" class="fab-button fab-main" id="fabMainButton">
+                <img src="imagens/carrinho.png" alt="Abrir Opções" class="icon-open">
+                <img src="imagens/x.png" alt="Fechar Opções" class="icon-close">
+            </a>
+        </div>
+
+        <!-- ESTRUTURA DA PAGINA ABAIXO -->
+
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide" data-link="cardapio.html">
+                    <img src="imagens/slides/slide-chili.gif" alt="Slide 1">
+                </div>
+                <div class="slide" data-link="cardapio.html">
+                    <img src="imagens/slides/slide-familia.gif" alt="Slide 2">
+                </div>
+                <div class="slide" data-link="cardapio.html">
+                    <img src="imagens/slides/slide-vegan.gif" alt="Slide 3">
+                </div>
+                <div class="slide" data-link="cardapio.html">
+                    <img src="imagens/slides/slide-chili.gif" alt="Slide 1">
+                </div>
+                <div class="slide" data-link="cardapio.html">
+                    <img src="imagens/slides/slide-familia.gif" alt="Slide 2">
+                </div>
+            </div>
+        </div>
+
+        <h1 id="queridinhos">CONHEÇA OS QUERIDINHOS DO JÃO</h1>
+
+        <div class="exibicao-container">
+            <div class="lista-exibicoes">
+                <div class="item-exibicao">
+                    <img src="imagens/cardapio/dogs1-02.png" alt="Lanche 1">
+                    <div class="item-exibicao-nome">
+                        <h2 class="">Duplo Burger Salada</h2>
+                        <p>Experimente o Duplo Burger Salada: dois hambúrgueres suculentos, cheddar derretido, molho branco com maionese, pão artesanal, alface e tomate crocantes!</p>
+                    </div>
+                </div>
+    
+                <div class="item-exibicao">
+                    <img src="imagens/cardapio/dogs1-03.png" alt="Lanche 2">
+                    <div class="item-exibicao-nome">
+                        <h2>Top 6</h2>
+                        <p>Experimente o Top 6: seis hambúrgueres suculentos, cinco queijos saborosos e um pão artesanal irresistível!</p>
+                    </div>
+                </div>
+    
+                <div class="item-exibicao">
+                    <img src="imagens/cardapio/dogs1-04.png" alt="Lanche 3">
+                    <div class="item-exibicao-nome">
+                        <h2>Vegie Burger</h2>
+                        <p>Experimente nosso delicioso burger vegano sem culpa, com um mix de cebola, pimentão amarelo, rucula, tomate, além do incrivel molho secreto do Jão e a carne incrivel de grão de bico.</p>
+                    </div>
+                </div>
+    
+                <div class="item-exibicao">
+                    <img src="imagens/cardapio/dogs1-05.png" alt="Lanche 4">
+                    <div class="item-exibicao-nome">
+                        <h2>Onnidog</h2>
+                        <p>Experimente nosso delicioso hot dog feito com cebola caramelisada e nosso incrivel molho secreto do Jão acompanhado de passata com tempero especial.</p>
+                    </div>
+                </div>
+    
+                <div class="item-exibicao">
+                    <img src="imagens/cardapio/dogs1-06.png" alt="Lanche 5">
+                    <div class="item-exibicao-nome">
+                        <h2>Porkdog</h2>
+                        <p>Experimente nosso incrivel Porkdog que conta com pedaços de lombo de porco empanado temperado com ervas especiais, além de um incrivel molho barbecue, pimentão vermelho, preparado no nosso pão artesanal de queijo.</p>
+                    </div>
+                </div>
+    
+                <div class="item-exibicao">
+                    <img src="imagens/cardapio/dogs1-07.png" alt="Lanche 6">
+                    <div class="item-exibicao-nome">
+                        <h2>Dupla Quente</h2>
+                        <p>Veja nosso incrivel combo da Dupla Quente são dois hot dogs com duas salsichas cada recheados com pimentões sortidos, molho de gorgonzola, vinagrete, katchup e mostarda.</p>
+                    </div>
+                </div>
+                <div class="item-exibicao">
+                    <img src="imagens/cardapio/dogs1-08.png" alt="Lanche 7">
+                    <div class="item-exibicao-nome">
+                        <h2>Sashi dog</h2>
+                        <p>Que tal experimentar nosso incrivel salmão que mistura o Brasil com o Japão, o Sashi Dog vem com pedaços de salmão empanados com muito molho tarê e cebolinha.</p>
+                    </div>
+                </div>
+                <div class="item-exibicao">
+                    <img src="imagens/cardapio/dogs1-09.png" alt="Lanche 8">
+                    <div class="item-exibicao-nome">
+                        <h2>Pizza Dog</h2>
+                        <p>Experimente a incrivel Pizza Dog, nossa pizza que vem com o recheio completo do hot dog, salsichas, mussarela, batata palha, bacon, cheddar, milho e para completas bacon e calabresa defumados.</p>
+                    </div>
+                </div>
+                <div class="item-exibicao">
+                    <img src="imagens/cardapio/dogs1-10.png" alt="Lanche 9">
+                    <div class="item-exibicao-nome">
+                        <h2>Chilli Dog</h2>
+                        <p>Experimente nosso incrivel Chilli Dog que vem com nosso pão especial sabor queijo, salsicha picante, molho chilli, cebola roxa e queijo cheddar derretido.</p>
+                    </div>
+                </div>
+                <div class="item-exibicao">
+                    <img src="imagens/cardapio/dogs1-11.png" alt="Lanche 10">
+                    <div class="item-exibicao-nome">
+                        <h2>Combo Família</h2>
+                        <p>Nesse combo a familia inteira sai feliz, prove os incriveis dog, um com queijo, alface, tomate, purê de batata e queijo, outro com vinagrete, mostarda e pepino, além de um com picles, cebola caramelisada e molho especial do Jão.</p>
+                    </div>
+                </div>
+                <div class="item-exibicao">
+                    <img src="imagens/cardapio/dogs1-12.png" alt="Lanche 11">
+                    <div class="item-exibicao-nome">
+                        <h2>Combo Vegie</h2>
+                        <p>Experiente nosso combo vegano com dogs recheados com repolho roxo, queijo vegano, cebola crispy e nossa saborosa salsicha vegana.</p>
+                    </div>
+                </div>
+            </div>
+            <button id="prevBtn">⟨</button>
+            <button id="nextBtn">⟩</button>
+        </div>
+
+        <div class="guia-de-pedido">
+            <div class="flat-guia">
+                <img src="imagens/flat designs/pedindo.png" alt="pedido">
+                <p>Comece pedindo pelo nosso APP ou pelo site!</p>
+            </div>
+            <div class="flat-guia">
+                <img src="imagens/flat designs/preparando.png" alt="pedido">
+                <p>Nossa equipe vai preparar o pedido com todo o carinho.</p>
+            </div>
+            <div class="flat-guia">
+                <img src="imagens/flat designs/delivery.png" alt="pedido">
+                <p>Receba seu lanche quentinho e se surpreenda com o sabor.</p>
+            </div>
+        </div>
+
+        <!-- ESTRUTURA DO FOOTER ABAIXO -->
+
+        <div class="main-container">
+            <footer>
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h3>Sobre Nós</h3>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58521.59090583094!2d-46.60264963500565!3d-23.546905479513466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce662d5569af7f%3A0xd3ad022cadc05ffc!2sTch%C3%AA%20lanches%20S%C3%A3o%20Mateus!5e0!3m2!1spt-BR!2sbr!4v1743199952241!5m2!1spt-BR!2sbr" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contato</h3>
+                        <ul>
+                            <li>
+                                <a href="tel:11955222255"><img src="imagens/whatsapp.png" alt="" id="whatsapp">Entre em contato pelo nosso WhatsApp: (11) 95522-2255</a>
+                            </li>
+                            <br>
+                            <li>
+                                <a href="mailto:contato@dogaodojao.com.br">Email: contato@dogaodojao.com.br</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Formas de pagamento</h3>
+                        <ul>
+                            <img src="imagens/pagamento/visa.png" alt="visa">
+                            <img src="imagens/pagamento/alelo.png" alt="alelo">
+                            <img src="imagens/pagamento/dinheiro.png" alt="dinheiro">
+                            <img src="imagens/pagamento/pix.png" alt="pix">
+                            <img src="imagens/pagamento/mastercard.png" alt="mastercard">
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Siga-nos</h3>
+                        <div class="social-icons">
+                            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 Wesley Tales. Todos os direitos reservados.
+                </div>
+            </footer>
+        </div>
+
+        <script src="menu.js"></script>
+        <script src="bt_flutuante.js"></script>
+        <script src="slider.js"></script>
+        <script src="queridinhos.js"></script>
+    </body>
+</html>
